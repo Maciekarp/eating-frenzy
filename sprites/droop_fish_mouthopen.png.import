@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byy0revdta0sv"
-path="res://.godot/imported/droop_fish_mouthopen.png-eb8dd93314876e7c9985bee0cac2bbed.ctex"
+path="res://.godot/imported/droop_fish_mouthopen.png-d9567613fdf8150c8658f72ff8149ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://droop_fish_mouthopen.png"
-dest_files=["res://.godot/imported/droop_fish_mouthopen.png-eb8dd93314876e7c9985bee0cac2bbed.ctex"]
+source_file="res://sprites/droop_fish_mouthopen.png"
+dest_files=["res://.godot/imported/droop_fish_mouthopen.png-d9567613fdf8150c8658f72ff8149ed4.ctex"]
 
 [params]
 
