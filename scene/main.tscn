@@ -10,7 +10,6 @@ fish_instance = ExtResource("2_4lqvg")
 
 [node name="Player" parent="." instance=ExtResource("1_d67s7")]
 position = Vector2(25, 5)
-move_speed = 1000.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 

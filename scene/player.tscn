@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://p2eeq4noooob"]
+[gd_scene load_steps=5 format=3 uid="uid://p2eeq4noooob"]
 
 [ext_resource type="Texture2D" uid="uid://criedppp3pfa0" path="res://sprites/stock_blue_square.png" id="1_05a1y"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_kj2pg"]
@@ -6,7 +6,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpp47"]
 size = Vector2(36, 36)
 
-[node name="Player" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_skcl6"]
+size = Vector2(34, 34)
+
+[node name="Player" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
+gravity_scale = 0.0
+linear_damp = 20.0
 script = ExtResource("1_kj2pg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,5 +23,9 @@ texture = ExtResource("1_05a1y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_qpp47")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_skcl6")
+disabled = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
