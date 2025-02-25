@@ -7,6 +7,8 @@ var size: float = 1
 
 @export var move_speed: float = 100
 
+@export var default_sprite: Sprite2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -18,6 +20,10 @@ func _physics_process(_delta: float) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
+	if linear_velocity.x < 0:
+		default_sprite.flip_h = true
+	else:
+		default_sprite.flip_h = false
 	pass
 	## Keyboard movement
 	##if Input.is_action_pressed("move up"):
