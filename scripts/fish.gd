@@ -5,6 +5,9 @@ var size: float = 0.5
 @export var accel_speed: float = 20
 @export var reset_dist: float = 50
 
+@export var default_sprite: Sprite2D
+
+
 var swim_To: Vector2
 
 
@@ -25,7 +28,10 @@ func _physics_process(delta: float) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if linear_velocity.x < 0:
+		default_sprite.flip_h = true
+	else:
+		default_sprite.flip_h = false
 	##if global_position.distance_to(swim_To) < reset_dist:
 	##	setSwimTo(Vector2(randf_range(-500, 500), randf_range(-300, 300)))
 	##global_position = global_position + global_position.direction_to(swim_To) * delta * move_speed
